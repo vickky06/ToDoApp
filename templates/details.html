@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDO:Details</title>
+
+</head>
+<body>
+<form class="contact-form" action="/add_Task/" method="POST">
+    {% csrf_token %}
+    <h2>Task: {{todolist.title}}</h2>
+<h2>Description: {{todolist.description}}</h2>
+<h2>Time: {{todolist.Time}}</h2>
+<h2>created: {{todolist.created}}</h2>
+<h2>Status: {{todolist.status}}</h2>
+            <select name="status">
+  <option  value="InProgress">In Progress</option>
+  <option value="Pending">Pending</option>
+  <option value="Completed">Completed</option>
+
+
+
+</select>
+
+</form>
+
+</body>
+
+</html>

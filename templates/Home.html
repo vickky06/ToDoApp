@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <h1>'Welcome to TODO app'</h1>
+
+</head>
+<body>
+<button onclick="AdminFunction()">Goto Admin</button>
+
+
+
+
+
+<button onclick="GenFunction()">Goto General</button>
+
+
+
+<script>
+function AdminFunction() {
+
+      var x = document.URL;
+    location.replace(x+'\admin')
+}
+
+function GenFunction() {
+
+      var x = document.URL;
+    location.replace(x+'general/')
+}
+</script>
+</body>
+</html>

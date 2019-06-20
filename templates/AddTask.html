@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO: AddTask</title>
+    <h2>Add your task here</h2>
+</head>
+
+<body>
+<form class="contact-form" action="/add_Task/" method="POST">
+    {% csrf_token %}
+
+
+
+   Title: <input type="text" placeholder="Title"  name = "title"><br>
+    Description:<input type = "paragraps" style="width:300px; height:100px" placeholder="Description " name="description" ">
+    <br>
+    ToDO time:<input type="datetime-local" placeholder="Todo Time" name = "time">
+    Create Date:<input id="today" name="createTime" type="date" readonly>
+    Status:
+    <select name="status">
+  <option selected = "selected" value="InProgress">In Progress</option>
+  <option value="Pending">Pending</option>
+  <option value="Completed">Completed</option>
+
+</select>
+
+    <br><input type = "submit" value = "Add">
+
+
+
+</form>
+
+
+</body>
+<script>
+    document.querySelector("#today").valueAsDate = new Date();
+
+</script>
+
+</html>

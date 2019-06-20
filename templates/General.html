@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo:General</title>
+</head>
+<body>
+<H3>Welcome General User</H3>
+
+<ul>
+    {% for items in todolist%}
+    {% if items.deletion == False%}
+    <li>
+        <!--<a href="/todo/{{items.id}}/">{{items.title}}</a>-->
+        <a href="{% url 'detail' items.id%}">{{items.title}}</a>
+
+        <form action="/todoedit/{{items.id}}/">
+    <input type="submit" value="Completed" />
+</form>
+
+        <br><br>
+    </li>
+    {%endif%}
+    {% endfor %}
+</ul>
+
+
+<button onclick="Add()">Add Task</button>
+
+<script>
+    function Add() {
+
+      var x = document.URL;
+    location.replace(x+'addTask')
+
+    function Complete()
+    {
+    var x = document.URL;
+    location.replace(x+'\completedTask')
+    }
+
+}
+
+</script>
+</body>
+</html>
